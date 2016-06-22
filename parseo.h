@@ -1,5 +1,8 @@
 #ifndef _PARSEO_H
 #define _PARSEO_H 1
+#include <stdio.h> 
+#include <stdlib.h>
+#include <getopt.h>
 
 void usage(char *argv[], int code);
 

@@ -1,7 +1,10 @@
 #include "lista.h"
 
 lista_t ls_crear (){
-	return (lista_t) NULL;
+	lista_t L = NULL;
+	L -> sig = NULL;
+	L -> ant = NULL;
+	return (lista_t) L;
 }
 
 bool ls_es_vacia (const lista_t self){
@@ -51,7 +54,7 @@ void ls_agre_atras (list_t *self, const TIPO_DATO elem){
   } else ls_agre_atras (&((*self)->next),elem);
 }
 
-TIPO_DATO ls_eliminar (list_t *self){
+TIPO_DATO ls_elim_prim (list_t *self){
   lista_t aux;
   TIPO_DATO elem;
 

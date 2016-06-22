@@ -1,7 +1,4 @@
 #include <pareo.h>
-#include <stdio.h> 
-#include <stdlib.h>
-#include <getopt.h>
 
 void usage(char *argv[], int code){
     printf("usage: %s {--pack|-p}   <list of files> {--output|-o} file.emp \n",argv[0]);
@@ -12,7 +9,7 @@ void usage(char *argv[], int code){
     printf("usage: %s {--detail|-d} <file>          {--input|-i} file.emp \n",argv[0]);
     exit(code);
 }
-
+/*  solo en caso de concatenar los string del parametro 
 static size_t strlen_null(const char *s) {
     if (s == NULL)
         return 0;
@@ -23,7 +20,7 @@ static size_t strlen_null(const char *s) {
 static char *strcat_stuff(char *dest, const char *src, const char *stuff) {
     //completar en casao de usar la concatenacion de string para los parametros
 }
-
+*/
 void parsear(int argc, char * argv[], &arg_pack, &arg_list,  &arg_det, &arg_outdir, &arg_output, &arg_input){
     int c;
     int digit_optind = 0;
