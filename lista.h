@@ -30,11 +30,11 @@ lista_t ls_sig (const lista_t self);
 
 lista_t ls_ant (const lista_t self);
 
-void ls_agregar (lista_t *self, const TIPO_DATO elem);
+void ls_agregar (lista_t *self, TIPO_DATO elem);
 
-void ls_agre_ade (lista_t *self, const TIPO_DATO elem);
+void ls_agre_ade (lista_t *self, TIPO_DATO elem);
 
-void ls_agre_atras (lista_t *self, const TIPO_DATO elem);
+void ls_agre_atras (lista_t *self, TIPO_DATO elem);
 
 TIPO_DATO ls_eliminar (lista_t *self);
 

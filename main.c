@@ -1,6 +1,11 @@
 #include <stdio.h>   //inlcucón de librerias
 #include <stdlib.>
 #include <parceo.h>  //inlcucón de arvhivos
+#include "lista.h"
+#include "parseo.h"
+/*#include "funciones_empack.h"
+#include "funciones_despack.h"
+#include "funciones_mostar.h"*/
 
 int main (int argc , char * argv[] ){
 	int  opt;
