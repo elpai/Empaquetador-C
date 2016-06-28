@@ -1,6 +1,6 @@
 #include <stdio.h>
 
-int  emp_pack(const char *arg_pack, const char *arg_output){
+int  emp_pack(lista_t * L, const char *arg_output){
    // Completar
    return printf("Packing %s to %s\n",arg_pack,arg_output);
 }

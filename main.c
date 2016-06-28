@@ -9,28 +9,30 @@
 
 int main (int argc , char * argv[] ){
 	int  opt;
-  char *arg_pack;
-  char *arg_list;		    
-  char *arg_det;	    
-  char *arg_outdir;		    
-  char *arg_output;		    
-  char *arg_input;		    
+  char * arg_list;		    
+  char * arg_det;	    
+  char * arg_outdir;		    
+  char * arg_output;		    
+  char * arg_input;
+  char * arg_umpack;
+  lista_t * L;
 
-  opt = parse_args(argc, argv, &arg_pack, &arg_list,  &arg_det, &arg_outdir, &arg_output, &arg_input);
+  L = ls_crear();
+  opt = parse_args(argc, argv, &arg_umpack, &arg_list,  &arg_det, &arg_outdir, &arg_output, &arg_input, L);
   if (opt<=0) {
-  	usage(argv, EXIT_FAILURE);
+  	usage (argv, EXIT_FAILURE);
   }
   switch(opt) {
   	case ROP_PACK:
-  		emp_pack(arg_pack, arg_output);
+  		emp_pack(L, arg_output);
   	break;
   	case ROP_RPACK:
   		emp_rpack(arg_pack, arg_output);
   	break;
-  	case ROP_UPACK:
+  	case ROP_UNPACK:
   		emp_upack(arg_pack, arg_input, arg_outdir);
   	break;
-  	case ROP_UAPACK:
+  	case ROP_UNPACKALL:
   		emp_uapack(arg_input, arg_outdir);
   	break;
   	case ROP_LIST:
@@ -39,12 +41,22 @@ int main (int argc , char * argv[] ){
   	case ROP_DETAIL:
   		emp_detail(arg_det, arg_input);
   	break;
-  	case ROP_UNKNOWN:
-      //emp_unknown();
-  	return EXIT_SUCCESS;
-  	case ROP_BAD:
-      //emp_bad();
-  	return EXIT_FAILURE;
+  	case ROP_IMPUT:
+      
+  	break;
+  	case ROP_OUTPUT:
+      
+    break;
+    case ROP_OUTPUTDIR:
+
+    break;
+    case ROP_HELP:
+
+    break;
+  	default :
+  		printf("No se que carajo paso\n");
+  	break;
+
   }
   return EXIT_SUCCESS;
 }

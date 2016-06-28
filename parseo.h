@@ -6,6 +6,6 @@
 
 void usage(char *argv[], int code);
 
-void pasear(argc,argv[], &arg_pack, &arg_list,  &arg_det, &arg_outdir, &arg_output, &arg_input);
+void pasear(argc,argv[], &arg_pack, &arg_list,  &arg_det, &arg_outdir, &arg_output, &arg_input,*L);
 
 #endif
