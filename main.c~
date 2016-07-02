@@ -19,7 +19,7 @@ int main (int argc , char * argv[] ){
 	lista_t L;
 
   L = ls_crear();
-  opt = parsear (argc, argv, &arg_rpack, &arg_unpack, &arg_list,  &arg_det, &arg_outputdir, &arg_output, &arg_input, &L);
+  opt = parsear (argc, argv, &arg_rpack, &arg_umpack, &arg_list,  &arg_det, &arg_outputdir, &arg_output, &arg_input, &L);
   if (opt<=0) {
   	usage (argv, EXIT_FAILURE);
   }

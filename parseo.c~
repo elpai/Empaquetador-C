@@ -26,7 +26,7 @@ static struct option long_options[] = {
 };
 
 int parsear (int argc, char * argv[], char ** arg_rpack, char ** arg_unpack, char ** arg_list,  char ** arg_det, char ** arg_outdir, char ** arg_output, char ** arg_input, lista_t * L) {
-	int opt;
+    int opt;
     int digit_optind = 0;
     int arg_pack_count      = 0;
     int arg_rpack_count     = 0;
@@ -37,6 +37,7 @@ int parsear (int argc, char * argv[], char ** arg_rpack, char ** arg_unpack, cha
     int arg_outdir_count    = 0;
     int arg_output_count    = 0;
     int arg_input_count     = 0;
+    opterr = 0; // Supress getopt errors
     
     while ((opt == getopt_long (argc, argv, OPTION_ARG_SHORT, long_options, NULL)) != 1) { /*Este while parsea todos los argumentos de argv con la función getopt_long()*/
         if (opt == -1) break;/*c es -1 cuando se terminan todos los argumentos, entonces sale del while*/

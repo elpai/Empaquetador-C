@@ -10,7 +10,7 @@ int main(){
 	ls_agre_atras(&L,elem);
 	printf("se agrego atras de la lista\n");
 	printf("%s\n",ls_dato(L));
-	ls_liberar (&L);
+	ls_vaciar(&L);
 	printf("se libero la lista\n");
 	return 0;
 }

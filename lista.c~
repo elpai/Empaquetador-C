@@ -66,7 +66,7 @@ TIPO_DATO ls_elim_prim (lista_t *self){
 //char *ls_to_string(const /*@in@*/ list_t self);
 
 //void ls_show(const /*@in@*/ list_t self);
-/*
+
 void ls_liberar (lista_t * self){
 	int i;
 	int len = ls_tam (*self);
@@ -79,4 +79,4 @@ void ls_liberar (lista_t * self){
 	  		*(self) = aux;
 		}
   }
-}*/
+}

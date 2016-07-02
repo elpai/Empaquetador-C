@@ -42,6 +42,6 @@ TIPO_DATO ls_eliminar (lista_t *self);
 
 //void ls_show(const /*@in@*/ list_t self);
 
-//void ls_liberar (lista_t *self);
+void ls_liberar (lista_t *self);
 
 #endif
